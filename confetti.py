@@ -31,7 +31,8 @@ class Bola:
 class Game:
     def __init__(self, ancho=600, alto=800):
         self.pantalla = pg.display.set_mode((ancho, alto))
-        pg.display.set_caption("Confetti")
+        pg.display.set_caption('Confetti')
+        
         self.bolas = []
         
         for i in range(10): 
@@ -43,8 +44,8 @@ class Game:
                      random.randint(0, 255)
                     )
             bola = Bola(x, y, self.pantalla, color, radio)
-            bola.vx = random.randint(1,10) * random.choice([-1, 1])
-            bola.vy = random.randint(1,10) * random.choice([-1, 1])
+            bola.vx = random.randint(1,3) * random.choice([-1, 1])
+            bola.vy = random.randint(1,3) * random.choice([-1, 1])
             self.bolas.append(bola)
     
     
